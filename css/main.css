@@ -1,0 +1,258 @@
+@import '../fonts/fonts.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: 'SF Pro Display', sans-serif;
+}
+
+.container {
+    max-width: 1170px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    background: #000;
+    height: 60px;
+    padding: 11px;
+}
+
+.header__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__card {
+    position: relative;
+    background-image: url('../img/main-card.svg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    height: 262px;
+    border-radius: 24px;
+    margin-top: 32px;
+    overflow: hidden;
+    border: 1px solid #00000012;
+}
+
+.main__badge {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-radius: 0px 18px 0px 0px;
+    background: #000;
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 28.64px;
+    letter-spacing: 0.01em;
+    padding: 10px 18px;
+}
+
+.main__description {
+    width: 554px;
+    font-family: 'SF Pro Display', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20.25px;
+    color: #02090E;
+    opacity: .5;
+    padding: 12px 0px 0px 18px;
+}
+
+.main__wrapper {
+    margin: 32px 0;
+    display: flex;
+    gap: 32px;
+}
+
+.main__smallCard {
+    width: 100%;
+}
+
+.main__picture {
+    height: 262px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 24px;
+    background: #00000012;
+    overflow: hidden;
+    border: 1px solid #00000012;
+}
+
+.main__smallCard .main__description {
+    width: 503px;
+}
+
+.footer {
+    padding: 40px 0;
+    background: #000;
+}
+
+.footer__application-descr {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 20.25px;
+    margin-bottom: 20px;
+}
+
+.footer__apps {
+    display: flex;
+    justify-content: center;
+}
+
+.footer__application {
+    margin: 0 6px;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid #969696;
+    transition: background-color .2s ease, border-color .2s ease;
+    color: #969696;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.footer__application:hover {
+    background-color: #fff;
+    border-color: #fff;
+}
+
+.footer__application--appstore {
+    background: url('../img/apps/app-store.svg') center top 4px / 17px 20px no-repeat;
+}
+
+.footer__application--googleplay {
+    background: url('../img/apps/google-play.svg') center top 4px / 17px 20px no-repeat;
+}
+
+.footer__content {
+    display: flex;
+    justify-content: space-between;
+    color: #969696;
+}
+
+.footer__nav {
+    width: fit-content;
+    font-size: 16px;
+    font-weight: 600px;
+    color: #969696;
+    cursor: pointer;
+    transition: color 200ms;
+    display: inline-block;
+}
+
+.footer__nav:hover {
+    color: #fff;
+}
+
+.footer__info {
+    width: 577px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer__payments {
+    display: flex;
+    align-items: center;
+    margin: 30px 0 0 0;
+    flex-wrap: wrap;
+}
+
+.footer__payment {
+    background: no-repeat 50%;
+    opacity: .3;
+    margin: 0 15px 10px 0;
+    background-size: contain;
+    transition: opacity 250ms;
+}
+
+@media screen and (max-width: 1100px) {
+    .main__smallCard .main__description {
+        width: 100%;
+    }
+}
+
+
+@media screen and (max-width: 992px) {
+    .main__smallCard {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .main__description {
+        width: 100%;
+    }
+
+    .main__wrapper {
+        flex-direction: column;
+    }
+
+    .footer__info {
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer__payments {
+        justify-content: center;
+    }
+
+    .footer__content {
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .footer__applications {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+	.container {
+		width: 100%;
+	}
+
+    .header {
+        height: 56px;
+    }
+
+    .header__content img {
+        transform: scale(0.8);
+    }
+
+    .main__card {
+        height: 216px;
+        border-radius: 14px;
+        background-image: url('../img/main-card--mobile.svg');
+    }
+
+    .main__picture {
+        height: 216px;
+        border-radius: 14px;
+    }
+
+    .main__picture img {
+        transform: scale(0.7);
+    }
+
+    .main__badge {
+        font-size: 18px;
+        padding: 8px 14px;
+    }
+}
